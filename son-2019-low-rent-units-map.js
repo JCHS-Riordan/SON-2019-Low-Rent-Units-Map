@@ -29,7 +29,7 @@ $(document).ready(function() {
     ref_data = obj.values.slice(1)
 
     //create the title, notes, and search box
-    $('#chart_title').html(chart_title)
+    //$('#chart_title').html(chart_title) //Disabling for use on website, where the title is in the page, making this title redundant
     $('#table_notes').html(table_notes)
 
     H.JCHS.createSearchBox(ref_data, searchCallback, '', 1, 'search', 'Need help finding a metro? Search here...') //5th argument (the 1) tells the search box to list column index 1 from ref_data, instead of the default 0 (in this case metro name, not GEOID)
@@ -114,6 +114,7 @@ function createChart() {
           marginBottom: 50 //may have to adjust to fit all of the notes
         },
         title: { text: chart_title },
+        //subtitle: {text: table_notes},
         legend: {
           title: {
             text: 'Change in Low-Rent<br/>Units, 2011-2017 (%)' //Abbreviated legend title for formatting
