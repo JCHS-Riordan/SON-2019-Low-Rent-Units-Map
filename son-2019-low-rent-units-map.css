@@ -29,3 +29,8 @@
 .highcharts-area.zone-3,
 .highcharts-point.zone-3  { stroke: #c14d00; fill: #c14d00; }
 .highcharts-graph.zone-3 { stroke: #c14d00; }
+
+/*Formatting the notes in the exported images*/
+.highcharts-subtitle  {
+  font-size: 6px;
+}

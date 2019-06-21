@@ -114,12 +114,13 @@ function createChart() {
           marginBottom: 50 //may have to adjust to fit all of the notes
         },
         title: { text: chart_title },
-        //subtitle: {text: table_notes},
+        subtitle: {text: table_notes,
+                  y: -18},
         legend: {
           title: {
             text: 'Change in Low-Rent<br/>Units, 2011-2017 (%)' //Abbreviated legend title for formatting
           },
-          y: -25, //may have to adjust to fit all of the notes
+          y: -28, //may have to adjust to fit all of the notes
           x: 3
         }
       },
