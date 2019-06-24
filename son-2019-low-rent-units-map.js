@@ -8,7 +8,9 @@ var range = 'Sheet1!A:I'
 var chart_title = 'The Low-Rent Stock in Most Metros Has <br/> Declined Substantially Since 2011'
 var legend_title = 'Change in Units with<br/> Rents Under $800,<br/>2011–2017 (Percent)'
 
-var table_notes = 'Notes: Low-rent units have contract rents below $800. Rents are adjusted to 2017 dollars using CPI-U Less Shelter. Incomes are adjusted to 2017 dollars using CPI-U All Items. Low-income renters have household incomes below $32,000. <br/> Source: JCHS tabulations of US Census Bureau, American Community Survey 1-Year Estimates using the Missouri Data Center data.'
+var table_notes = 'Notes: Low-rent units have contract rents below $800. Rents are adjusted to 2017 dollars using CPI-U Less Shelter. Incomes are adjusted to 2017 dollars using CPI-U All Items. Low-income renters have household incomes below $32,000. <br/> Source: <a href="https://www.jchs.harvard.edu/" target="_blank">Harvard Joint Center for Housing Studies</a> tabulations of US Census Bureau, American Community Survey 1-Year Estimates using the Missouri Data Center data.'
+//Hyperlink doesn't work in the exported image and the full JCHS name makes the source two lines long, so reverting to 'JCHS' in the source here for the export
+var export_notes = 'Notes: Low-rent units have contract rents below $800. Rents are adjusted to 2017 dollars using CPI-U Less Shelter. Incomes are adjusted to 2017 dollars using CPI-U All Items. Low-income renters have household incomes below $32,000. <br/> Source: JCHS tabulations of US Census Bureau, American Community Survey 1-Year Estimates using the Missouri Data Center data.'
 
 var export_filename = "Metro Low-Rent Unit Loss - Harvard JCHS - State of the Nation's Housing 2019"
 
@@ -114,7 +116,7 @@ function createChart() {
           marginBottom: 50 //may have to adjust to fit all of the notes
         },
         title: { text: chart_title },
-        subtitle: {text: table_notes,
+        subtitle: {text: export_notes,
                   y: -18},
         legend: {
           title: {
